@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
-import { twMerge } from "tailwind-merge";
+import { cn } from "~/utils";
 
 type ButtonVariant = "filled" | "outlined" | "outlined-primary";
 
@@ -29,7 +29,7 @@ export default function Button({ variant = "filled", icon, children, className, 
 
   return (
     <button
-      className={twMerge(
+      className={cn(
         "relative flex h-12.5 items-center justify-center gap-3 rounded-[3px] px-5 text-xl font-normal shadow-[0_2px_3px_0_rgba(0,0,0,0.10)]",
         VARIANT_MAP[variant],
         className,

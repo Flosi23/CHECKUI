@@ -32,6 +32,23 @@ export default {
         success: "hsl(var(--success))",
         "on-success": "hsl(var(--on-success))",
       },
+      fontSize: {
+        "1.5xl": ["1.375rem", { lineHeight: "1.875rem" }],
+      },
+      width: {
+        "4.5": "1.125rem",
+        "5.5": "1.375rem",
+        "12.5": "3.125rem",
+        "13": "3.25rem",
+        "15": "3.75rem",
+      },
+      height: {
+        "4.5": "1.125rem",
+        "5.5": "1.375rem",
+        "12.5": "3.125rem",
+        "13": "3.25rem",
+        "15": "3.75rem",
+      },
     },
   },
   plugins: [require("tailwindcss-safe-area")],
