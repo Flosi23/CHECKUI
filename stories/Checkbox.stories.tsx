@@ -25,3 +25,18 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const WithLabel: Story = {
+  args: {
+    disabled: true,
+    label: "Ich habe die AGB gelesen und akzeptiere sie"
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    disabled: true,
+    label: "Ich habe die AGB gelesen und akzeptiere sie",
+    error: "Bitte akzeptieren Sie die AGB"
+  },
+};
