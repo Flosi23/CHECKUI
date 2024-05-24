@@ -11,7 +11,8 @@
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint --max-warnings=0 .",
     "lint:fix": "eslint --fix .",
     "storybook:dev": "storybook dev -p 3002",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "mintlify:dev": "mintlify dev"
   },
   "author": "",
   "license": "ISC",
