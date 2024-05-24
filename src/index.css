@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--on-secondary: 0 0% 100%;
+		--primary: 206 100% 33%;
+		--primary-variant: 205 98% 38%;
+		--primary-variant-dim: 205 99% 32%;
+		--primary-container: 201 81% 96%;
+		--on-primary: 0 0% 100%;
+		--surface-primary: 213 90% 24%;
+		--surface: 0 0% 100%;
+		--surface-dim: 240 19% 95%;
+		--surface-container: 0 0% 96%;
+		--surface-variant: 0 0% 98%;
+		--on-surface: 0 0% 20%;
+		--on-surface-light: 0 0% 40%;
+		--on-surface-very-light: 0 0% 60%;
+		--outline: 0 0% 71%;
+		--outline-variant: 0 0% 86%;
+
+		--error: 0 63% 48%;
+		--on-error: 0 0% 100%;
+
+		--warning: 31 100% 47%;
+		--on-warning: 0 0% 100%;
+
+		--success: 83 72% 41%;
+		--on-success: 0 0% 100%;
+	}
+}
