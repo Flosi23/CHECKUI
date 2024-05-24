@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { BoxedRadioGroup, RadioGroupItem } from "@lib/RadioGroup";
+import { fn } from "@storybook/test";
 
 const meta = {
   title: "Components/BoxedRadioGroup",
@@ -7,7 +8,16 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  decorators: [
+    (Story) => (
+      <div className="w-96">
+        <Story />
+      </div>
+    ),
+  ],
   args: {
+    label: "Label",
+    onClickHelpIcon: fn(),
     direction: "column",
     children: (
       <>

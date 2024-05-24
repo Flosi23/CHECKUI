@@ -4,18 +4,32 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import * as Label from "@radix-ui/react-label";
 
 import { cn } from "@lib/utils";
+import { HelptextOutline } from "@lib/icons";
 
 export interface BoxedRadioGroupProps extends RadioGroupProps {
+  label?: React.ReactNode;
   error?: React.ReactNode;
+  onClickHelpIcon?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const BoxedRadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimitive.Root>, BoxedRadioGroupProps>(
-  ({ className, error, id, ...props }, ref) => {
+  ({ className, label, error, onClickHelpIcon, id, ...props }, ref) => {
     const generatedId = useId();
     const usedId = id || generatedId;
 
     return (
-      <div className={"flex flex-col gap-1"}>
+      <div className={"flex flex-col"}>
+        {label && (
+          <Label.Root htmlFor={usedId} className={"mb-3 flex items-center justify-between text-xl text-on-surface"}>
+            {label}
+
+            {onClickHelpIcon && (
+              <button onClick={onClickHelpIcon} className={"mr-4"}>
+                <HelptextOutline className={"h-5 w-5 fill-on-surface"} />
+              </button>
+            )}
+          </Label.Root>
+        )}
         <RadioGroup
           id={usedId}
           className={"rounded-[5px] border border-outline data-[disabled]:bg-surface-container"}
@@ -25,7 +39,7 @@ const BoxedRadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimi
           ref={ref}
         />
         {error && (
-          <span id={`${usedId}-error`} className={"text-sm leading-4 text-error"}>
+          <span id={`${usedId}-error`} className={"mt-1 text-sm leading-4 text-error"}>
             {error}
           </span>
         )}
@@ -70,7 +84,7 @@ const RadioGroupItem = React.forwardRef<
         id={usedId}
         ref={ref}
         className={cn(
-          `my-4.5 ml-4 peer flex h-5.5 w-5.5 items-center justify-center rounded-full border border-outline bg-surface text-primary disabled:cursor-not-allowed disabled:bg-surface-container
+          `my-4.5 peer ml-4 flex h-5.5 w-5.5 items-center justify-center rounded-full border border-outline bg-surface text-primary disabled:cursor-not-allowed disabled:bg-surface-container
          data-[state=checked]:border-primary`,
           className,
         )}
@@ -81,7 +95,9 @@ const RadioGroupItem = React.forwardRef<
       </RadioGroupPrimitive.Item>
       {children && (
         <Label.Root
-          className={"mr-4 text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"}
+          className={
+            "mr-4 text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
+          }
           htmlFor={usedId}>
           {children}
         </Label.Root>
