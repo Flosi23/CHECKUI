@@ -2,6 +2,7 @@ import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
 import { cn } from "~/utils";
 
 type ButtonVariant = "filled" | "outlined" | "outlined-primary";
+type IconPosition = "left" | "right";
 
 type HTMLButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
@@ -14,18 +15,31 @@ export interface ButtonProps extends HTMLButtonProps {
    * If set, the button will additionally display an icon.
    */
   icon?: ReactNode;
+  /**
+   * The position of the icon. Defaults to "left"
+   */
+  iconPosition?: IconPosition;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export default function Button({ variant = "filled", icon, children, className, ...props }: ButtonProps) {
+export default function Button({
+  variant = "filled",
+  iconPosition = "left",
+  icon,
+  children,
+  className,
+  ...props
+}: ButtonProps) {
   const VARIANT_MAP: Record<ButtonVariant, string> = {
     filled:
       "bg-primary-variant text-on-primary fill-on-primary stroke-on-primary hover:bg-primary-variant-dim disabled:bg-primary-variant/50",
     outlined: "bg-surface text-on-surface-light fill-on-surface-light stroke-on-surface-light border border-[#CCCCCC]",
     "outlined-primary": "bg-surface text-primary fill-primary stroke-primary border border-primary",
   };
+
+  const Icon = icon && <div className="min-h-5 min-w-5">{icon}</div>;
 
   return (
     <button
@@ -35,8 +49,9 @@ export default function Button({ variant = "filled", icon, children, className, 
         className,
       )}
       {...props}>
-      {icon && <div className="min-h-5 min-w-5">{icon}</div>}
+      {Icon && iconPosition === "left" && Icon}
       {children}
+      {Icon && iconPosition === "right" && Icon}
     </button>
   );
 }
