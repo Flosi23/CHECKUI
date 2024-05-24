@@ -59,8 +59,8 @@ const RadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimitive.
       <RadioGroupPrimitive.Root
         className={cn(
           "grid divide-outline-variant",
-          direction === "column" && "grid-flow-row divide-y",
-          direction === "row" && "grid-flow-col divide-x",
+          direction === "column" && "grid-flow-row divide-y *:py-4.5 px-4",
+          direction === "row" && "grid-flow-col divide-x py-2.5 *:py-2 *:px-4",
           className,
         )}
         {...props}
@@ -84,7 +84,7 @@ const RadioGroupItem = React.forwardRef<
         id={usedId}
         ref={ref}
         className={cn(
-          `my-4.5 peer ml-4 flex h-5.5 w-5.5 items-center justify-center rounded-full border border-outline bg-surface text-primary disabled:cursor-not-allowed disabled:bg-surface-container
+          `peer flex h-5.5 w-5.5 items-center justify-center rounded-full border border-outline bg-surface text-primary disabled:cursor-not-allowed disabled:bg-surface-container
          data-[state=checked]:border-primary`,
           className,
         )}
@@ -96,7 +96,7 @@ const RadioGroupItem = React.forwardRef<
       {children && (
         <Label.Root
           className={
-            "mr-4 text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
+            "text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
           }
           htmlFor={usedId}>
           {children}
