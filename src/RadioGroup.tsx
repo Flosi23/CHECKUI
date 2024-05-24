@@ -20,7 +20,12 @@ const BoxedRadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimi
     return (
       <div className={"flex flex-col"}>
         {label && (
-          <Label.Root htmlFor={usedId} className={"mb-3 flex items-center justify-between text-xl text-on-surface"}>
+          <Label.Root
+            htmlFor={usedId}
+            className={cn(
+              "mb-3 flex items-center justify-between text-xl text-on-surface",
+              props.disabled && "text-on-surface-light",
+            )}>
             {label}
 
             {onClickHelpIcon && (
@@ -59,8 +64,8 @@ const RadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimitive.
       <RadioGroupPrimitive.Root
         className={cn(
           "grid divide-outline-variant",
-          direction === "column" && "grid-flow-row divide-y *:py-4.5 px-4",
-          direction === "row" && "grid-flow-col divide-x py-2.5 *:py-2 *:px-4",
+          direction === "column" && "*:py-4.5 grid-flow-row divide-y px-4",
+          direction === "row" && "grid-flow-col divide-x py-2.5 *:px-4 *:py-2",
           className,
         )}
         {...props}
@@ -95,9 +100,7 @@ const RadioGroupItem = React.forwardRef<
       </RadioGroupPrimitive.Item>
       {children && (
         <Label.Root
-          className={
-            "text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
-          }
+          className={"text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"}
           htmlFor={usedId}>
           {children}
         </Label.Root>
