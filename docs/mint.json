@@ -34,6 +34,10 @@
         "essentials/navigation",
         "essentials/reusable-snippets"
       ]
+    },
+    {
+      "group": "Components",
+      "pages": ["components/button"]
     }
   ]
 }

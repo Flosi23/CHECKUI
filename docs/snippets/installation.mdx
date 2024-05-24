@@ -1,0 +1,14 @@
+export const Installation = ({children}) => {
+    return (
+        <>
+            <h2>Installation</h2>
+            <Steps>
+                {children}
+            </Steps>
+        </>
+    );
+}
+
+export const codeStepTitle = "Copy and paste the following code into your project.";
+export const depsStepTitle = "Install the following dependencies.";
+export const updateStepTitle = "Update the import paths to match your project setup.";
