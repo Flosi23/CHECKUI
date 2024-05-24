@@ -7,17 +7,13 @@ import * as Label from "@radix-ui/react-label";
 
 interface CheckboxProps extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
   /**
-   * The label for the checkbox. If not provided, the checkbox will be rendered without a label.
-   */
-  label?: ReactNode;
-  /**
    * The error message to display below the checkbox. If not provided, no error message will be displayed.
    */
   error?: ReactNode;
 }
 
 const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root>, CheckboxProps>(
-  ({ className, label, error, id, ...props }, ref) => {
+  ({ className, children, error, id, ...props }, ref) => {
     const generatedId = useId();
     const usedId = id || generatedId;
 
@@ -41,11 +37,11 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
               <CheckboxCheckmark className="w-[13px] fill-on-primary" />
             </CheckboxPrimitive.Indicator>
           </CheckboxPrimitive.Root>
-          {label && (
+          {children && (
             <Label.Root
               className={"text-lg leading-none text-on-surface peer-disabled:cursor-not-allowed"}
               htmlFor={usedId}>
-              {label}
+              {children}
             </Label.Root>
           )}
         </div>
