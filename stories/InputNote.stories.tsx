@@ -35,8 +35,10 @@ export const WithInput: Story = {
   decorators: [
     (Story) => (
       <div>
-        <Input label="Email" className="mb-4" />
-        <Story />
+        <Input label="Email" />
+        <div className="mt-4">
+          <Story />
+        </div>
       </div>
     ),
   ],
