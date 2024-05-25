@@ -1,22 +1,9 @@
 name: Deploy Storybook to GitHub Pages
 on: [push]
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-
 jobs:
-  Deploy:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - name: Deploy Storybook to GitHub Pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          path: 'storybook-static'
-          build_command: "npm run storybook:build"
 
