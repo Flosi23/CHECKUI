@@ -32,7 +32,7 @@ const BoxedRadioGroup = React.forwardRef<
 
           {onClickHelpIcon && (
             <button onClick={onClickHelpIcon} className={"mr-4"}>
-              <HelptextOutline className={"h-5 w-5 fill-on-surface"} />
+              <HelptextOutline className={"h-5 w-5 fill-on-surface-very-light"} />
             </button>
           )}
         </Label.Root>

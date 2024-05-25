@@ -183,7 +183,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 type="button"
                 onMouseDown={onClickHelpIcon}
                 aria-description={"Delete content inside input"}>
-                <HelptextOutline className="h-5 w-5" />
+                <HelptextOutline className="h-5 w-5 fill-on-surface-very-light" />
               </button>
             )}
             {loading && <Spinner color="primary" className="h-5 w-5" />}
