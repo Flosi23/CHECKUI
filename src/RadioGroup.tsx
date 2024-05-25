@@ -12,68 +12,70 @@ export interface BoxedRadioGroupProps extends RadioGroupProps {
   onClickHelpIcon?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const BoxedRadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimitive.Root>, BoxedRadioGroupProps>(
-  ({ className, label, error, onClickHelpIcon, id, ...props }, ref) => {
-    const generatedId = useId();
-    const usedId = id || generatedId;
+const BoxedRadioGroup = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Root>,
+  BoxedRadioGroupProps
+>(({ className, label, error, onClickHelpIcon, id, ...props }, ref) => {
+  const generatedId = useId();
+  const usedId = id || generatedId;
 
-    return (
-      <div className={"flex flex-col"}>
-        {label && (
-          <Label.Root
-            htmlFor={usedId}
-            className={cn(
-              "mb-3 flex items-center justify-between text-xl text-on-surface",
-              props.disabled && "text-on-surface-light",
-            )}>
-            {label}
+  return (
+    <div className={"flex flex-col"}>
+      {label && (
+        <Label.Root
+          htmlFor={usedId}
+          className={cn(
+            "mb-3 flex items-center justify-between text-xl text-on-surface",
+            props.disabled && "text-on-surface-light",
+          )}>
+          {label}
 
-            {onClickHelpIcon && (
-              <button onClick={onClickHelpIcon} className={"mr-4"}>
-                <HelptextOutline className={"h-5 w-5 fill-on-surface"} />
-              </button>
-            )}
-          </Label.Root>
-        )}
-        <RadioGroup
-          id={usedId}
-          className={"rounded-[5px] border border-outline data-[disabled]:bg-surface-container"}
-          aria-invalid={!!error}
-          aria-errormessage={`${usedId}-error`}
-          {...props}
-          ref={ref}
-        />
-        {error && (
-          <span id={`${usedId}-error`} className={"mt-1 text-sm leading-4 text-error"}>
-            {error}
-          </span>
-        )}
-      </div>
-    );
-  },
-);
+          {onClickHelpIcon && (
+            <button onClick={onClickHelpIcon} className={"mr-4"}>
+              <HelptextOutline className={"h-5 w-5 fill-on-surface"} />
+            </button>
+          )}
+        </Label.Root>
+      )}
+      <RadioGroup
+        id={usedId}
+        className={"rounded-[5px] border border-outline data-[disabled]:bg-surface-container"}
+        aria-invalid={!!error}
+        aria-errormessage={`${usedId}-error`}
+        {...props}
+        ref={ref}
+      />
+      {error && (
+        <span id={`${usedId}-error`} className={"mt-1 text-sm leading-4 text-error"}>
+          {error}
+        </span>
+      )}
+    </div>
+  );
+});
 BoxedRadioGroup.displayName = "BoxedRadioGroup";
 
 interface RadioGroupProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root> {
   direction?: "row" | "column";
 }
 
-const RadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimitive.Root>, RadioGroupProps>(
-  ({ className, direction = "column", ...props }, ref) => {
-    return (
-      <RadioGroupPrimitive.Root
-        className={cn(
-          "grid divide-outline-variant",
-          direction === "column" && "grid-flow-row divide-y px-4 *:py-4.5",
-          direction === "row" && "grid-flow-col divide-x py-2.5 *:px-4 *:py-2",
-          className,
-        )}
-        {...props}
-        ref={ref}
-      />
-    );
-  },
-);
+const RadioGroup = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Root>,
+  RadioGroupProps
+>(({ className, direction = "column", ...props }, ref) => {
+  return (
+    <RadioGroupPrimitive.Root
+      className={cn(
+        "grid divide-outline-variant",
+        direction === "column" && "grid-flow-row divide-y px-4 *:py-4.5",
+        direction === "row" && "grid-flow-col divide-x py-2.5 *:px-4 *:py-2",
+        className,
+      )}
+      {...props}
+      ref={ref}
+    />
+  );
+});
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 
 const RadioGroupItem = React.forwardRef<
@@ -100,7 +102,9 @@ const RadioGroupItem = React.forwardRef<
       </RadioGroupPrimitive.Item>
       {children && (
         <Label.Root
-          className={"text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"}
+          className={
+            "text-lg text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
+          }
           htmlFor={usedId}>
           {children}
         </Label.Root>

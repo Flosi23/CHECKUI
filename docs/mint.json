@@ -26,7 +26,13 @@
     },
     {
       "group": "Components",
-      "pages": ["components/button", "components/checkbox", "components/input", "components/radio-group"]
+      "pages": [
+        "components/button",
+        "components/checkbox",
+        "components/input",
+        "components/radio-group",
+        "components/spinner"
+      ]
     }
   ]
 }

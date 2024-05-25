@@ -60,7 +60,8 @@ export default {
         },
       },
       animation: {
-        "spinner-line": "2156ms spinner-arc ease-in-out infinite, 1829ms spinner-rotate linear infinite",
+        "spinner-line":
+          "2156ms spinner-arc ease-in-out infinite, 1829ms spinner-rotate linear infinite",
       },
     },
   },

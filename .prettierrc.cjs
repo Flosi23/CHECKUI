@@ -6,7 +6,7 @@ const config = {
   endOfLine: "lf",
   htmlWhitespaceSensitivity: "ignore",
   jsxSingleQuote: false,
-  printWidth: 120,
+  printWidth: 100,
   proseWrap: "never",
   quoteProps: "as-needed",
   semi: true,

@@ -29,7 +29,11 @@ export interface SpinnerProps
     VariantProps<typeof spinnerVariantsSvg> {}
 
 const Spinner = forwardRef<SVGSVGElement, SpinnerProps>(({ color, className, ...props }, ref) => (
-  <svg ref={ref} viewBox="0 0 50 50" className={cn(spinnerVariantsSvg({ color, className }))} {...props}>
+  <svg
+    ref={ref}
+    viewBox="0 0 50 50"
+    className={cn(spinnerVariantsSvg({ color, className }))}
+    {...props}>
     <circle className={cn(spinnerVariantsBackground({ color }))} cx="25" cy="25" r="22.5" />
     <circle
       className="origin-center animate-spinner-line fill-none stroke-[4] [stroke-linecap:round]"

@@ -18,7 +18,13 @@ const SvgUserLoggedIn = (props: SVGProps<SVGSVGElement>) => (
         className="st0_1710522923430"
         vectorEffect="non-scaling-stroke"
       />
-      <circle cx={13} cy={10.6} r={4.1} className="st0_1710522923430" vectorEffect="non-scaling-stroke" />
+      <circle
+        cx={13}
+        cy={10.6}
+        r={4.1}
+        className="st0_1710522923430"
+        vectorEffect="non-scaling-stroke"
+      />
     </g>
   </svg>
 );

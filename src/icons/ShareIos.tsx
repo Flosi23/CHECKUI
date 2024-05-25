@@ -1,7 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgShareIos = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" preserveAspectRatio="none" viewBox="0 0 95 120" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    overflow="visible"
+    preserveAspectRatio="none"
+    viewBox="0 0 95 120"
+    {...props}>
     <path
       d="M79.842 38.772H66.084v9h13.758A3.16 3.16 0 0 1 83 50.93v54.684a3.16 3.16 0 0 1-3.158 3.158H15.158A3.16 3.16 0 0 1 12 105.614V50.93a3.16 3.16 0 0 1 3.158-3.158h11.857v-9H15.158A12.17 12.17 0 0 0 3 50.93v54.684a12.17 12.17 0 0 0 12.158 12.158h64.684A12.17 12.17 0 0 0 92 105.614V50.93a12.17 12.17 0 0 0-12.158-12.158"
       vectorEffect="non-scaling-stroke"

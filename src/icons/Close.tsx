@@ -1,7 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgClose = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" preserveAspectRatio="none" viewBox="0 0 20 20" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    overflow="visible"
+    preserveAspectRatio="none"
+    viewBox="0 0 20 20"
+    {...props}>
     <path
       d="M17.94 0 10 7.92 2.06 0 0 2.06 7.92 10 0 17.94 2.06 20 10 12.08 17.94 20 20 17.94 12.08 10 20 2.06z"
       style={{

@@ -4,7 +4,7 @@ description: "Displays a form input field or a component that looks like an inpu
 ---
 
 import { Story } from "/snippets/stories.mdx";
-import { codeStepTitle, cssStepTitle, depsOnStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+import { codeStepTitle, depsOnStepTitle, updateStepTitle } from "/snippets/installation.mdx";
 import Input from "/snippets/components/Input.mdx";
 
 <Story component="input" story="regular" />
@@ -17,7 +17,7 @@ import Input from "/snippets/components/Input.mdx";
     <Step title={depsOnStepTitle}>
         <Card title="Spinner" href="/components/spinner"></Card>
     </Step>
-    <Step title={cssStepTitle}>
+    <Step title="Add the following code to your tailwind base layer section in your index.css">
         ```css
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button,

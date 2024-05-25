@@ -12,41 +12,44 @@ export interface BoxedCheckboxGroupProps extends CheckboxGroupProps {
   onClickHelpIcon?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const BoxedCheckboxGroup = React.forwardRef<React.ElementRef<typeof CheckboxGroup>, BoxedCheckboxGroupProps>(
-  ({ className, label, error, onClickHelpIcon, id, ...props }, ref) => {
-    const generatedId = useId();
-    const usedId = id || generatedId;
+const BoxedCheckboxGroup = React.forwardRef<
+  React.ElementRef<typeof CheckboxGroup>,
+  BoxedCheckboxGroupProps
+>(({ className, label, error, onClickHelpIcon, id, ...props }, ref) => {
+  const generatedId = useId();
+  const usedId = id || generatedId;
 
-    return (
-      <div className="flex flex-col">
-        {label && (
-          <Label.Root htmlFor={usedId} className={cn("mb-3 flex items-center justify-between text-xl text-on-surface")}>
-            {label}
+  return (
+    <div className="flex flex-col">
+      {label && (
+        <Label.Root
+          htmlFor={usedId}
+          className={cn("mb-3 flex items-center justify-between text-xl text-on-surface")}>
+          {label}
 
-            {onClickHelpIcon && (
-              <button onClick={onClickHelpIcon} className="mr-4">
-                <HelptextOutline className="h-5 w-5 fill-on-surface" />
-              </button>
-            )}
-          </Label.Root>
-        )}
-        <CheckboxGroup
-          id={usedId}
-          className="rounded-[5px] border border-outline data-[disabled]:bg-surface-container"
-          aria-invalid={!!error}
-          aria-errormessage={`${usedId}-error`}
-          {...props}
-          ref={ref}
-        />
-        {error && (
-          <span id={`${usedId}-error`} className="mt-1 text-sm leading-4 text-error">
-            {error}
-          </span>
-        )}
-      </div>
-    );
-  },
-);
+          {onClickHelpIcon && (
+            <button onClick={onClickHelpIcon} className="mr-4">
+              <HelptextOutline className="h-5 w-5 fill-on-surface" />
+            </button>
+          )}
+        </Label.Root>
+      )}
+      <CheckboxGroup
+        id={usedId}
+        className="rounded-[5px] border border-outline data-[disabled]:bg-surface-container"
+        aria-invalid={!!error}
+        aria-errormessage={`${usedId}-error`}
+        {...props}
+        ref={ref}
+      />
+      {error && (
+        <span id={`${usedId}-error`} className="mt-1 text-sm leading-4 text-error">
+          {error}
+        </span>
+      )}
+    </div>
+  );
+});
 BoxedCheckboxGroup.displayName = "BoxedCheckboxGroup";
 
 interface CheckboxGroupProps extends React.ComponentPropsWithoutRef<"div"> {

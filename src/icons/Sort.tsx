@@ -1,7 +1,14 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgSort = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" id="Ebene_1" x={0} y={0} viewBox="0 0 200 200" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    id="Ebene_1"
+    x={0}
+    y={0}
+    viewBox="0 0 200 200"
+    {...props}>
     <style>{".st0{fill:#333}"}</style>
     <g id="Ebene_1_00000031909729953714900780000012805681231924881332_">
       <path

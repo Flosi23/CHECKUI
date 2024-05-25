@@ -7,20 +7,22 @@ export interface PlectrumProps extends ComponentPropsWithoutRef<"div"> {
   textClassName?: string;
 }
 
-const Plectrum = forwardRef<HTMLDivElement, PlectrumProps>(({ children, className, textClassName, ...props }, ref) => {
-  return (
-    <div ref={ref} className={cn("grid", className)} {...props}>
-      <Plektrum className="col-start-1 row-start-1" />
-      <div
-        className={cn(
-          "col-start-1 row-start-1 my-3 ml-5.5 mr-4 flex flex-col items-center justify-center text-center text-white",
-          textClassName,
-        )}>
-        {children}
+const Plectrum = forwardRef<HTMLDivElement, PlectrumProps>(
+  ({ children, className, textClassName, ...props }, ref) => {
+    return (
+      <div ref={ref} className={cn("grid", className)} {...props}>
+        <Plektrum className="col-start-1 row-start-1" />
+        <div
+          className={cn(
+            "col-start-1 row-start-1 my-3 ml-5.5 mr-4 flex flex-col items-center justify-center text-center text-white",
+            textClassName,
+          )}>
+          {children}
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  },
+);
 Plectrum.displayName = "Plectrum";
 
 export { Plectrum };

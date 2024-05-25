@@ -1,0 +1,64 @@
+---
+title: Spinner
+description: "Used to indicate a loading state"
+---
+
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import Spinner from "/snippets/components/Spinner.mdx";
+
+<Story component="spinner" story="primary" />
+
+## Installation
+
+<Steps>
+    <Step title="Extend your tailwind theme with the following keyframes and animations">
+        ```ts
+        keyframes: {
+            "spinner-rotate": {
+                to: {
+                    transform: "rotate3d(0, 0, 1, 360deg)",
+                },
+            }
+            "spinner-arc": {
+                from: {
+                    strokeDasharray: "0 200",
+                    strokeDashoffset: "-0",
+                },
+                to: {
+                    strokeDasharray: "200 200",
+                    strokeDashoffset: "-140",
+                },
+            },
+        },
+        animation: {
+            "spinner-line": "2156ms spinner-arc ease-in-out infinite, 1829ms spinner-rotate linear infinite",
+        },
+        ```
+    </Step>
+    <Step title={codeStepTitle}>
+        <Spinner/>
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { Spinner } from "@lib/Spinner";
+
+<Spinner color="primary"/>
+```
+
+## Examples
+
+### Primary
+<Story component="spinner" story="primary" />
+
+### Primary Transparent
+<Story component="spinner" story="primary-transparent" />
+
+### On Primary
+<Story component="spinner" story="on-primary" />

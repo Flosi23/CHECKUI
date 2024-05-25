@@ -14,7 +14,8 @@ const buttonVariants = cva(
           "bg-primary-variant text-on-primary fill-on-primary stroke-on-primary hover:bg-primary-variant-dim disabled:bg-primary-variant/50",
         outlined:
           "bg-surface text-on-surface-light fill-on-surface-light stroke-on-surface-light border border-[#CCCCCC]",
-        "outlined-primary": "bg-surface text-primary fill-primary stroke-primary border border-primary",
+        "outlined-primary":
+          "bg-surface text-primary fill-primary stroke-primary border border-primary",
       },
     },
     defaultVariants: {
@@ -39,7 +40,18 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "filled", iconPosition = "left", icon, children, className, asChild = false, ...props }, ref) => {
+  (
+    {
+      variant = "filled",
+      iconPosition = "left",
+      icon,
+      children,
+      className,
+      asChild = false,
+      ...props
+    },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
     const Icon = icon && <div className="min-h-5 min-w-5">{icon}</div>;
 

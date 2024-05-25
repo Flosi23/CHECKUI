@@ -16,7 +16,10 @@ import { Cancel, HelptextOutline } from "@lib/icons";
 import { cn } from "@lib/utils";
 
 export interface InputProps
-  extends Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "size" | "placeholder"> {
+  extends Omit<
+    DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+    "size" | "placeholder"
+  > {
   /**
    * The label of the input.
    */
@@ -208,7 +211,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 function imitateInputEvent(input: HTMLInputElement, value: string) {
-  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")?.set;
+  const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+    window.HTMLInputElement.prototype,
+    "value",
+  )?.set;
   nativeInputValueSetter!.call(input, value);
   input.dispatchEvent(new Event("input", { bubbles: true }));
 }
