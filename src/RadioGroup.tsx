@@ -52,7 +52,7 @@ const BoxedRadioGroup = React.forwardRef<React.ElementRef<typeof RadioGroupPrimi
     );
   },
 );
-BoxedRadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+BoxedRadioGroup.displayName = "BoxedRadioGroup";
 
 interface RadioGroupProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root> {
   direction?: "row" | "column";

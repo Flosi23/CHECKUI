@@ -16,9 +16,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {},
-};
+export const Default: Story = {};
 
 export const Disabled: Story = {
   args: {
@@ -26,17 +24,15 @@ export const Disabled: Story = {
   },
 };
 
-export const WithLabel: Story = {
+export const Label: Story = {
   args: {
-    disabled: true,
-    children: "Ich habe die AGB gelesen und akzeptiere sie"
+    children: "Ich habe die AGB gelesen und akzeptiere sie",
   },
 };
 
-export const WithError: Story = {
+export const Error: Story = {
   args: {
-    disabled: true,
     children: "Ich habe die AGB gelesen und akzeptiere sie",
-    error: "Bitte akzeptieren Sie die AGB"
+    error: "Bitte akzeptieren Sie die AGB",
   },
 };
