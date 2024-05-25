@@ -59,7 +59,7 @@ const CheckboxGroup = React.forwardRef<HTMLDivElement, CheckboxGroupProps>(
       <div
         className={cn(
           "grid divide-outline-variant",
-          direction === "column" && "*:py-4.5 grid-flow-row divide-y px-4",
+          direction === "column" && "grid-flow-row divide-y px-4 *:py-4.5",
           direction === "row" && "grid-flow-col divide-x py-2.5 *:px-4 *:py-2",
           className,
         )}

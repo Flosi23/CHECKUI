@@ -3,34 +3,27 @@ title: Radio Group
 description: "A set of checkable buttons - known as radio buttons - where no more than one of the buttons can be checked at a time."
 ---
 
-
-import {Story} from "/snippets/stories.mdx";
-import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
-import RadioGroup from "/snippets/components/RadioGroup.mdx"
+import { Story } from "/snippets/stories.mdx";
+import { codeStepTitle, depsStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+import RadioGroup from "/snippets/components/RadioGroup.mdx";
 
 <Tabs>
-    <Tab title="Default">
-        <Story component="radiogroup" story="regular"/>
-    </Tab>
-    <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="regular"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="radiogroup" story="regular" />
+  </Tab>
+  <Tab title="Boxed">
+    <Story component="boxedradiogroup" story="regular" />
+  </Tab>
 </Tabs>
 
 ## Installation
+
 <Steps>
-    <Step title={depsStepTitle}>
-        ```tsx
-        npm i @radix-ui/react-radio-group
-        ```
-        ```tsx
-        npm i @radix-ui/react-label
-        ```
-    </Step>
-    <Step title={codeStepTitle}>
-        <RadioGroup/>
-    </Step>
-    <Step title={updateStepTitle}></Step>
+  <Step title={depsStepTitle}>```tsx npm i @radix-ui/react-radio-group ``` ```tsx npm i @radix-ui/react-label ```</Step>
+  <Step title={codeStepTitle}>
+    <RadioGroup />
+  </Step>
+  <Step title={updateStepTitle}></Step>
 </Steps>
 
 ## Usage
@@ -56,47 +49,51 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx"
         </BoxedRadioGroup>
         ```
     </Tab>
+
 </Tabs>
 
 ## Examples
 
 ### Regular
+
 <Tabs>
-    <Tab title="Default">
-        <Story component="radiogroup" story="regular"/>
-    </Tab>
-    <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="regular"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="radiogroup" story="regular" />
+  </Tab>
+  <Tab title="Boxed">
+    <Story component="boxedradiogroup" story="regular" />
+  </Tab>
 </Tabs>
 
 ### Row
+
 <Tabs>
-    <Tab title="Default">
-        <Story component="radiogroup" story="row"/>
-    </Tab>
-    <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="row"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="radiogroup" story="row" />
+  </Tab>
+  <Tab title="Boxed">
+    <Story component="boxedradiogroup" story="row" />
+  </Tab>
 </Tabs>
 
 ### Disabled
+
 <Tabs>
-    <Tab title="Default">
-        <Story component="radiogroup" story="disabled"/>
-    </Tab>
-    <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="disabled"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="radiogroup" story="disabled" />
+  </Tab>
+  <Tab title="Boxed">
+    <Story component="boxedradiogroup" story="disabled" />
+  </Tab>
 </Tabs>
 
 ### Disabled Single Element
-<Tabs>
-    <Tab title="Default">
-        <Story component="radiogroup" story="disabled"/>
-    </Tab>
-    <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="disabled-single-element"/>
-    </Tab>
-</Tabs>
 
+<Tabs>
+  <Tab title="Default">
+    <Story component="radiogroup" story="disabled" />
+  </Tab>
+  <Tab title="Boxed">
+    <Story component="boxedradiogroup" story="disabled-single-element" />
+  </Tab>
+</Tabs>

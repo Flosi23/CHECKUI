@@ -1,0 +1,68 @@
+---
+title: Input
+description: "Displays a form input field or a component that looks like an input field."
+---
+
+import { Story } from "/snippets/stories.mdx";
+import { codeStepTitle, cssStepTitle, depsOnStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+import Input from "/snippets/components/Input.mdx";
+
+<Story component="input" story="regular" />
+
+## Installation
+
+<Note>This Component depends on the [Spinner](/components/spinner) component</Note>
+
+<Steps>
+    <Step title={depsOnStepTitle}>
+        <Card title="Spinner" href="/components/spinner"></Card>
+    </Step>
+    <Step title={cssStepTitle}>
+        ```css
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"] {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        ```
+    </Step>
+    <Step title={codeStepTitle}>
+        <Input/>
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { Input } from "@lib/Input";
+
+<Input label="Name" name="name" />;
+```
+
+## Examples
+
+### Regular
+
+<Story component="input" story="regular" />
+
+### Error
+
+<Story component="input" story="error-filled-out" />
+
+### Disabled
+
+<Story component="input" story="disabled-filled-out" />
+
+### Loading
+
+<Story component="input" story="loading" />
+
+### Icon
+
+<Story component="input" story="icon" />
+
+### Help Overlay
+
+<Story component="input" story="help-overlay" />

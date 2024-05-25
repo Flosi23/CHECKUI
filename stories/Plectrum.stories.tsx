@@ -8,10 +8,12 @@ const meta = {
     layout: "centered",
   },
   args: {
-    children: <>
-      <span className="text-2xl font-semibold leading-5 mb-2">Gratis </span>
-      <span className="leading-4">für jeden</span>
-    </>
+    children: (
+      <>
+        <span className="mb-2 text-2xl font-semibold leading-5">Gratis </span>
+        <span className="leading-4">für jeden</span>
+      </>
+    ),
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Plectrum>;

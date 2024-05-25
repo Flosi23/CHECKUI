@@ -10,8 +10,8 @@ const meta = {
     layout: "centered",
   },
   args: {
-    label: "Vorname",
-    name: "firstName",
+    label: "Name",
+    name: "name",
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Input>;
@@ -56,6 +56,12 @@ export const HelpOverlay: Story = {
 export const HelpOverlayIcon: Story = {
   args: {
     onClickHelpIcon: fn(),
+    icon: Edit,
+  },
+};
+
+export const Icon: Story = {
+  args: {
     icon: Edit,
   },
 };

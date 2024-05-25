@@ -1,34 +1,32 @@
-import {BoxedCheckboxGroup} from "../../src/Checkbox";
-import {Story} from "/snippets/stories.mdx";
-import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
-import Checkbox from "/snippets/components/Checkbox.mdx"
+import { BoxedCheckboxGroup } from "../../src/Checkbox";
+import { Story } from "/snippets/stories.mdx";
+import { codeStepTitle, depsStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+import Checkbox from "/snippets/components/Checkbox.mdx";
 
 <Tabs>
-    <Tab title="Default">
-        <Story component="checkbox" story="regular"/>
-    </Tab>
-    <Tab title="Group">
-        <Story component="checkboxgroup" story="regular"/>
-    </Tab>
-    <Tab title="Boxed Group">
-        <Story component="boxedcheckboxgroup" story="regular"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="checkbox" story="regular" />
+  </Tab>
+  <Tab title="Group">
+    <Story component="checkboxgroup" story="regular" />
+  </Tab>
+  <Tab title="Boxed Group">
+    <Story component="boxedcheckboxgroup" story="regular" />
+  </Tab>
 </Tabs>
 
 ## Installation
+
 <Steps>
-    <Step title={depsStepTitle}>
-        ```tsx
-        npm i @radix-ui/react-checkbox
-        ```
-    </Step>
-    <Step title={codeStepTitle}>
-        <Checkbox/>
-    </Step>
-    <Step title={updateStepTitle}></Step>
+  <Step title={depsStepTitle}>```tsx npm i @radix-ui/react-checkbox ```</Step>
+  <Step title={codeStepTitle}>
+    <Checkbox />
+  </Step>
+  <Step title={updateStepTitle}></Step>
 </Steps>
 
 ## Usage
+
 <Tabs>
     <Tab title="Default">
         ```tsx
@@ -57,6 +55,7 @@ import Checkbox from "/snippets/components/Checkbox.mdx"
         </BoxedCheckboxGroup>
         ```
     </Tab>
+
 </Tabs>
 
 ## Examples
@@ -64,41 +63,42 @@ import Checkbox from "/snippets/components/Checkbox.mdx"
 ### Default
 
 <Tabs>
-    <Tab title="Default">
-        <Story component="checkbox" story="regular"/>
-    </Tab>
-    <Tab title="Group">
-        <Story component="checkboxgroup" story="regular"/>
-    </Tab>
-    <Tab title="Boxed Group">
-        <Story component="boxedcheckboxgroup" story="regular"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="checkbox" story="regular" />
+  </Tab>
+  <Tab title="Group">
+    <Story component="checkboxgroup" story="regular" />
+  </Tab>
+  <Tab title="Boxed Group">
+    <Story component="boxedcheckboxgroup" story="regular" />
+  </Tab>
 </Tabs>
 
 ### Label
-<Story title="With Label" component="checkbox" story="label"/>
 
+<Story title="With Label" component="checkbox" story="label" />
 
 ### Disabled
+
 <Tabs>
-    <Tab title="Default">
-        <Story component="checkbox" story="disabled"/>
-    </Tab>
-    <Tab title="Group">
-        <Story component="checkboxgroup" story="disabled"/>
-    </Tab>
-    <Tab title="Boxed Group">
-        <Story component="boxedcheckboxgroup" story="disabled"/>
-    </Tab>
+  <Tab title="Default">
+    <Story component="checkbox" story="disabled" />
+  </Tab>
+  <Tab title="Group">
+    <Story component="checkboxgroup" story="disabled" />
+  </Tab>
+  <Tab title="Boxed Group">
+    <Story component="boxedcheckboxgroup" story="disabled" />
+  </Tab>
 </Tabs>
 
 ### Error
-<Tabs>
-    <Tab title="Default">
-        <Story component="checkbox" story="error"/>
-    </Tab>
-    <Tab title="Boxed Group">
-        <Story component="boxedcheckboxgroup" story="error"/>
-    </Tab>
-</Tabs>
 
+<Tabs>
+  <Tab title="Default">
+    <Story component="checkbox" story="error" />
+  </Tab>
+  <Tab title="Boxed Group">
+    <Story component="boxedcheckboxgroup" story="error" />
+  </Tab>
+</Tabs>
