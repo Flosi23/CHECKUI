@@ -1,0 +1,9 @@
+name: Deploy Storybook to GitHub Pages
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Storybook to GitHub Pages
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+
