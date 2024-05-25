@@ -3,9 +3,11 @@ title: Button
 description: "Buttons are the most common way to interact with a website."
 ---
 
-
+import {Story} from "/snippets/examples.mdx";
 import {codeStepTitle, Installation, updateStepTitle} from "/snippets/installation.mdx";
 import Button from "/snippets/components/Button.mdx"
+
+<Story title="Component" id="components-button--filled"/>
 
 <Installation>
     <Step title={codeStepTitle}>
@@ -13,3 +15,11 @@ import Button from "/snippets/components/Button.mdx"
     </Step>
     <Step title={updateStepTitle}></Step>
 </Installation>
+
+## Examples
+
+<Story title="Filled" id="components-button--filled"/>
+<Story title="Outlined" id="components-button--outlined"/>
+<Story title="Outlined Primary" id="components-button--outlined-primary"/>
+<Story title="With Icon" id="components-button--icon"/>
+
