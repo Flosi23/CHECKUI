@@ -1,0 +1,53 @@
+---
+title: Gratification Bar
+description: "A Gratification Bar is a component that displays a message to the user to inform them of e.g. coupons"
+---
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import GratificationBar from "/snippets/components/GratificationBar.mdx";
+
+<Story component="gratificationbar" story="help-overlay" />
+
+## Installation
+
+<Steps>
+    <Step title={codeStepTitle}>
+        <GratificationBar />
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { GratificationBar } from "@lib/GratificationBar";
+
+<GratificationBar>Gratification Bar Text</GratificationBar>;
+```
+
+## Examples
+
+### Regular
+
+<Story component="gratificationbar" story="regular" />
+
+### Icon
+
+<Story component="gratificationbar" story="icon" />
+
+### Help Overlay
+
+<Story component="gratificationbar" story="help-overlay" />
+
+### Gold Club
+
+<Story component="gratificationbar" story="gold-club" />
+
+### Two Lines
+
+<Story component="gratificationbar" story="two-lines" />
+
+### Error
+
+<Story component="gratificationbar" story="error" />

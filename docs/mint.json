@@ -50,6 +50,7 @@
 		"components/button",
 		"components/badge",
 		"components/checkbox",
+		"components/gratification-bar",
 		"components/input",
 		"components/input_node",
 		"components/label",
