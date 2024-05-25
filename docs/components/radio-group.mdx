@@ -3,16 +3,17 @@ title: Radio Group
 description: "A set of checkable buttons - known as radio buttons - where no more than one of the buttons can be checked at a time."
 ---
 
+
 import {Story} from "/snippets/stories.mdx";
 import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import RadioGroup from "/snippets/components/RadioGroup.mdx"
 
 <Tabs>
     <Tab title="Default">
-        <Story component="radiogroup" story="default"/>
+        <Story component="radiogroup" story="regular"/>
     </Tab>
     <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="default"/>
+        <Story component="boxedradiogroup" story="regular"/>
     </Tab>
 </Tabs>
 
@@ -37,7 +38,7 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx"
 <Tabs>
     <Tab title="Default">
         ```tsx
-        import {RadioGroup, RadioGroupItem} from "@/components/ui/Checkbocx";
+        import {RadioGroup, RadioGroupItem} from "@lib/Checkbox";
 
         <RadioGroup direction="column">
             <RadioGroupItem value="1">Option 1</RadioGroupItem>
@@ -47,7 +48,7 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx"
     </Tab>
     <Tab title="Boxed">
         ```tsx
-        import {BoxedRadioGroup, RadioGroupItem} from "@/components/ui/Checkbocx";
+        import {BoxedRadioGroup, RadioGroupItem} from "@lib/Checkbox";
 
         <BoxedRadioGroup direction="column">
             <RadioGroupItem value="1">Option 1</RadioGroupItem>
@@ -59,13 +60,13 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx"
 
 ## Examples
 
-### Column
+### Regular
 <Tabs>
     <Tab title="Default">
-        <Story component="radiogroup" story="default"/>
+        <Story component="radiogroup" story="regular"/>
     </Tab>
     <Tab title="Boxed">
-        <Story component="boxedradiogroup" story="default"/>
+        <Story component="boxedradiogroup" story="regular"/>
     </Tab>
 </Tabs>
 

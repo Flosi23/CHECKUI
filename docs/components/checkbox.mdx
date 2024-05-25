@@ -1,15 +1,19 @@
----
-title: Checkbox
-description: "A control that allows the user to toggle between checked and not checked."
----
-
-
-
+import {BoxedCheckboxGroup} from "../../src/Checkbox";
 import {Story} from "/snippets/stories.mdx";
 import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import Checkbox from "/snippets/components/Checkbox.mdx"
 
-<Story component="checkbox" story="default"/>
+<Tabs>
+    <Tab title="Default">
+        <Story component="checkbox" story="regular"/>
+    </Tab>
+    <Tab title="Group">
+        <Story component="checkboxgroup" story="regular"/>
+    </Tab>
+    <Tab title="Boxed Group">
+        <Story component="boxedcheckboxgroup" story="regular"/>
+    </Tab>
+</Tabs>
 
 ## Installation
 <Steps>
@@ -25,23 +29,76 @@ import Checkbox from "/snippets/components/Checkbox.mdx"
 </Steps>
 
 ## Usage
-```tsx
-import { Checkbox } from "@/components/ui/Checkbox";
+<Tabs>
+    <Tab title="Default">
+        ```tsx
+        import {Checkbox} from "@lib/Checkbox";
 
-<Checkbox/>
-```
+        <Checkbox/>
+        ```
+    </Tab>
+    <Tab title="Group">
+        ```tsx
+        import {Checkbox, CheckboxGroup} from "@lib/Checkbox";
+
+        <CheckboxGroup>
+            <Checkbox value="1">Text 1</Checkbox>
+            <Checkbox value="2">Text 2</Checkbox>
+        </CheckboxGroup>
+        ```
+    </Tab>
+    <Tab title="Boxed Group">
+        ```tsx
+        import {BoxedCheckboxGroup, Checkbox} from "@lib/Checkbox";
+
+        <BoxedCheckboxGroup>
+            <Checkbox value="1">Text 1</Checkbox>
+            <Checkbox value="2">Text 2</Checkbox>
+        </BoxedCheckboxGroup>
+        ```
+    </Tab>
+</Tabs>
 
 ## Examples
 
 ### Default
-<Story component="checkbox" story="default"/>
+
+<Tabs>
+    <Tab title="Default">
+        <Story component="checkbox" story="regular"/>
+    </Tab>
+    <Tab title="Group">
+        <Story component="checkboxgroup" story="regular"/>
+    </Tab>
+    <Tab title="Boxed Group">
+        <Story component="boxedcheckboxgroup" story="regular"/>
+    </Tab>
+</Tabs>
+
+### Label
+<Story title="With Label" component="checkbox" story="label"/>
+
 
 ### Disabled
-<Story component="checkbox" story="disabled"/>
+<Tabs>
+    <Tab title="Default">
+        <Story component="checkbox" story="disabled"/>
+    </Tab>
+    <Tab title="Group">
+        <Story component="checkboxgroup" story="disabled"/>
+    </Tab>
+    <Tab title="Boxed Group">
+        <Story component="boxedcheckboxgroup" story="disabled"/>
+    </Tab>
+</Tabs>
 
-### With Label
-<Story title="With Label" component="checkbox" story="with-label"/>
-
-### With Error
-<Story title="With Error" component="checkbox" story="with-error"/>
+### Error
+<Tabs>
+    <Tab title="Default">
+        <Story component="checkbox" story="error"/>
+    </Tab>
+    <Tab title="Boxed Group">
+        <Story component="boxedcheckboxgroup" story="error"/>
+    </Tab>
+</Tabs>
 
