@@ -28,8 +28,11 @@
       "group": "Components",
       "pages": [
         "components/button",
+        "components/badge",
         "components/checkbox",
         "components/input",
+        "components/input_node",
+        "components/label",
         "components/radio-group",
         "components/plectrum",
         "components/spinner"

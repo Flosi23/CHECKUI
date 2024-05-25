@@ -1,0 +1,17 @@
+export const IconCards = ({icons}) => {
+    return (
+        <div style={{display: "grid", gridTemplateColumns: "auto"}}>
+            {icons.map(icon => (
+                    <div className="w-min">
+                        <div style={{display: "flex", alignItems: "center", justifyItems: "center", marginBottom: "1rem"}}>
+                            <h3 style={{margin: "0", marginRight: "1rem"}}>{icon.name}</h3>
+                            <img src={icon.docsSvgSrc} style={{height: "1.5rem", width: "1.5rem", margin: "auto"}}/>
+                        </div>
+                        <Accordion title="View Code">
+                                {icon.code}
+                        </Accordion>
+                    </div>
+            ))}
+        </div>
+    );
+}

@@ -1,0 +1,35 @@
+---
+title: Badge
+description: "Displays a badge"
+---
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import Badge from "/snippets/components/Badge.mdx";
+
+<Story component="badge" story="regular" />
+
+## Installation
+
+<Steps>
+    <Step title={codeStepTitle}>
+        <Badge />
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { Badge } from "@lib/Badge";
+
+<Badge>Badge</Badge>;
+```
+
+## Examples
+
+### Regular
+
+<Story component="badge" story="regular" />
+

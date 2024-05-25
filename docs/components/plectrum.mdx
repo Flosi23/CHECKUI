@@ -1,0 +1,35 @@
+---
+Title: Plectrum
+description: "A Plectrum is used to highlight special deals and discounts"
+---
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import Plectrum from "/snippets/components/Plectrum.mdx";
+
+<Story component="plectrum" story="regular" />
+
+## Installation
+
+<Steps>
+    <Step title={codeStepTitle}>
+        <Plectrum />
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { Plectrum } from "@lib/Plectrum";
+
+<Plectrum>
+    <span className="mb-2 text-2xl font-semibold leading-5">Gratis </span>
+    <span className="leading-4">für jeden</span>
+</Plectrum>;
+```
+
+## Examples
+
+### Regular
+<Story component="plectrum" story="regular"/>

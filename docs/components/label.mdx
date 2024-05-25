@@ -1,0 +1,36 @@
+---
+title: Label
+description: "Displays a label"
+---
+
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import Label from "/snippets/components/Label.mdx";
+
+<Story component="label" story="regular" />
+
+## Installation
+
+<Steps>
+    <Step title={codeStepTitle}>
+        <Label />
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { Label } from "@lib/Label";
+
+<Label>Label</Label>;
+```
+
+## Examples
+
+### Regular
+
+<Story component="label" story="regular" />
+

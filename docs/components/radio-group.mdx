@@ -3,8 +3,9 @@ title: Radio Group
 description: "A set of checkable buttons - known as radio buttons - where no more than one of the buttons can be checked at a time."
 ---
 
-import { Story } from "/snippets/stories.mdx";
-import { codeStepTitle, depsStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import RadioGroup from "/snippets/components/RadioGroup.mdx";
 
 <Tabs>
@@ -33,7 +34,7 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx";
 <Tabs>
     <Tab title="Default">
         ```tsx
-        import {RadioGroup, RadioGroupItem} from "@lib/Checkbox";
+        import {RadioGroup, RadioGroupItem} from "@lib/RadioGroup";
 
         <RadioGroup direction="column">
             <RadioGroupItem value="1">Option 1</RadioGroupItem>
@@ -43,7 +44,7 @@ import RadioGroup from "/snippets/components/RadioGroup.mdx";
     </Tab>
     <Tab title="Boxed">
         ```tsx
-        import {BoxedRadioGroup, RadioGroupItem} from "@lib/Checkbox";
+        import {BoxedRadioGroup, RadioGroupItem} from "@lib/RadioGroup";
 
         <BoxedRadioGroup direction="column">
             <RadioGroupItem value="1">Option 1</RadioGroupItem>

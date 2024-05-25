@@ -1,0 +1,44 @@
+---
+title: Input Note
+description: "Displays an input note, that can be used to further explain the purpose / effect of an input field."
+---
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import InputNode from "/snippets/components/InputNote.mdx";
+
+<Story component="inputnote" story="with-input" />
+
+## Installation
+
+<Steps>
+    <Step title={codeStepTitle}>
+        <InputNode />
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { InputNote, InputNoteContent, InputNoteTitle } from "@lib/InputNote";
+
+<InputNote>
+    <InputNoteTitle>Information from CHECK24</InputNoteTitle>
+    <InputNoteContent>You will receive a confirmation via email.</InputNoteContent>
+<InputNote/>
+```
+
+## Examples
+
+### Regular
+<Story component="inputnote" story="regular" />
+
+### Close
+<Story component="inputnote" story="close" />
+
+### With Input
+<Story component="inputnote" story="with-input" />
+
+
+
