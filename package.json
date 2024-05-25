@@ -11,7 +11,7 @@
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint --max-warnings=0 .",
     "lint:fix": "eslint --fix .",
     "storybook:dev": "storybook dev -p 3002",
-    "storybook:build": "storybook build -o ./",
+    "storybook:build": "storybook build",
     "mint:dev": "cd docs && mintlify dev",
     "sync:components": "npx tsx sync.ts ./src ./docs/snippets/components"
   },
