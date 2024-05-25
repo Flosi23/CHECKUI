@@ -2,41 +2,69 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "CHECKUI",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+	"dark": "/logo/dark.svg",
+	"light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#063773",
-    "light": "#0271C2",
-    "dark": "#005EA8",
-    "anchors": {
-      "from": "#005EA8",
-      "to": "#0271C2"
-    }
+	"primary": "#063773",
+	"light": "#0271C2",
+	"dark": "#005EA8",
+	"anchors": {
+	  "from": "#005EA8",
+	  "to": "#0271C2"
+	}
   },
   "topbarCtaButton": {
-    "name": "GitHub",
-    "url": "https://github.com/Flosi23/CHECKUI"
+	"name": "GitHub",
+	"url": "https://github.com/Flosi23/CHECKUI"
   },
+  "primaryTab": {
+	"name": "Components"
+  },
+  "tabs": [
+	{
+	  "name": "Wireframe Builder",
+	  "url": "wireframe"
+	}
+  ],
   "navigation": [
-    {
-      "group": "Get Started",
-      "pages": ["introduction", "setup"]
-    },
-    {
-      "group": "Components",
-      "pages": [
-        "components/button",
-        "components/badge",
-        "components/checkbox",
-        "components/input",
-        "components/input_node",
-        "components/label",
-        "components/radio-group",
-        "components/plectrum",
-        "components/spinner"
-      ]
-    }
+	{
+	  "group": "Get Started",
+	  "pages": [
+		"introduction",
+		"setup"
+	  ]
+	},
+	{
+	  "group": "Components",
+	  "pages": [
+		"components/button",
+		"components/badge",
+		"components/checkbox",
+		"components/input",
+		"components/input_node",
+		"components/label",
+		"components/radio-group",
+		"components/plectrum",
+		"components/spinner"
+	  ]
+	},
+	{
+	  "group": "Wireframe",
+	  "pages": [
+		"wireframe/installation",
+		"wireframe/usage",
+		"wireframe/customization",
+		{
+		  "group": "Integration",
+		  "pages": [
+			"wireframe/integration/react",
+			"wireframe/integration/remix",
+			"wireframe/integration/nextjs"
+		  ]
+		}
+	  ]
+	}
   ]
 }
