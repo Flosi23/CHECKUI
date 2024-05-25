@@ -159,6 +159,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             defaultValue={defaultValue}
             aria-invalid={!!error}
             aria-errormessage={error ? `${usedId}-error` : undefined}
+            autoCorrect={"off"}
             {...inputProps}
           />
           <span className="absolute right-4 top-1/2 flex -translate-y-1/2 gap-4">
