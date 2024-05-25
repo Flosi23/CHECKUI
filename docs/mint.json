@@ -26,6 +26,10 @@
 	{
 	  "name": "Wireframe Builder",
 	  "url": "wireframe"
+	},
+	{
+	  "name": "TypeScript Types",
+	  "url": "types"
 	}
   ],
   "navigation": [
@@ -48,6 +52,15 @@
 		"components/radio-group",
 		"components/plectrum",
 		"components/spinner"
+	  ]
+	},
+	{
+	  "group": "TypeScript Types",
+	  "pages": [
+		"types/installation",
+		"types/wireframe",
+		"types/app-bridge",
+		"types/chatty"
 	  ]
 	},
 	{
