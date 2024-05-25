@@ -42,6 +42,26 @@ export default {
         "13": "3.25rem",
         "15": "3.75rem",
       },
+      keyframes: {
+        "spinner-rotate": {
+          to: {
+            transform: "rotate3d(0, 0, 1, 360deg)",
+          },
+        },
+        "spinner-arc": {
+          from: {
+            strokeDasharray: "0 200",
+            strokeDashoffset: "-0",
+          },
+          to: {
+            strokeDasharray: "200 200",
+            strokeDashoffset: "-140",
+          },
+        },
+      },
+      animation: {
+        "spinner-line": "2156ms spinner-arc ease-in-out infinite, 1829ms spinner-rotate linear infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-safe-area")],
