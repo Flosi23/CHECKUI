@@ -1,0 +1,137 @@
+---
+title: "Setup"
+description: "Setup and install the basic tools you need to get started"
+---
+
+CHECKUI uses the copy and paste approach which means that as you add more components you might also have to add more dependencies.
+This guide will only help you to set up absolute basic dependencies and files you will always need.
+
+## Prerequisites
+
+Before you can start using CHECKUI, you need to have the following tools installed and files present:
+- [tailwindcss](https://tailwindcss.com/), a `tailwind.config.js` file and a global `index.css` file
+- [react](https://reactjs.org/)
+Without them you won't be able to use CHECKUI.
+
+## Base Setup
+
+<Note>In the following we assume that all [Prerequisites](#prerequisites) are met</Note>
+
+### Install dependencies
+Install the `@raix-ui/react-slot` dependency that is used in almost every component.
+
+```bash
+npm i @radix-ui/react-slot
+```
+
+Install `tw-merge`, `clsx` and `class-variance-authority` to merge tailwind classes and add class variance.
+```bash
+npm i tw-merge clsx class-variance-authority
+```
+
+### Utils file
+Create a `utils.ts` file in your project (often referenced as `@lib/utils` by our components) and paste the following content:
+
+```ts
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+```
+
+### Tailwind Steup
+Paste the following content in your `index.css` file
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --on-secondary: 0 0% 100%;
+    --primary: 206 100% 33%;
+    --primary-variant: 205 98% 38%;
+    --primary-variant-dim: 205 99% 32%;
+    --primary-container: 201 81% 96%;
+    --on-primary: 0 0% 100%;
+    --surface-primary: 213 90% 24%;
+    --surface: 0 0% 100%;
+    --surface-dim: 240 19% 95%;
+    --surface-container: 0 0% 96%;
+    --surface-variant: 0 0% 98%;
+    --on-surface: 0 0% 20%;
+    --on-surface-light: 0 0% 40%;
+    --on-surface-very-light: 0 0% 60%;
+    --outline: 0 0% 71%;
+    --outline-variant: 0 0% 86%;
+
+    --error: 0 63% 48%;
+    --on-error: 0 0% 100%;
+
+    --warning: 31 100% 47%;
+    --on-warning: 0 0% 100%;
+
+    --success: 83 72% 41%;
+    --on-success: 0 0% 100%;
+  }
+}
+```
+
+Paste the following content in your `tailwind.config` file
+
+```ts
+export default {
+  theme: {
+    extend: {
+      fontFamily: {
+        arial: ["Arial", "Helvetica", "ui-sans-sarif"],
+        verdana: ["Verdana", "Arial", "Helvetica", "ui-sans-sarif"],
+      },
+      colors: {
+        "on-secondary": "hsl(var(--on-secondary))",
+        primary: "hsl(var(--primary))",
+        "primary-variant": "hsl(var(--primary-variant))",
+        "primary-variant-dim": "hsl(var(--primary-variant-dim))",
+        "primary-container": "hsl(var(--primary-container))",
+        "on-primary": "hsl(var(--on-primary))",
+        "surface-primary": "hsl(var(--surface-primary))",
+        surface: "hsl(var(--surface))",
+        "surface-dim": "hsl(var(--surface-dim))",
+        "surface-container": "hsl(var(--surface-container))",
+        "surface-variant": "hsl(var(--surface-variant))",
+        "on-surface": "hsl(var(--on-surface))",
+        "on-surface-light": "hsl(var(--on-surface-light))",
+        "on-surface-very-light": "hsl(var(--on-surface-very-light))",
+        outline: "hsl(var(--outline))",
+        "outline-variant": "hsl(var(--outline-variant))",
+        error: "hsl(var(--error))",
+        "on-error": "hsl(var(--on-error))",
+        warning: "hsl(var(--warning))",
+        "on-warning": "hsl(var(--on-warning))",
+        success: "hsl(var(--success))",
+        "on-success": "hsl(var(--on-success))",
+      },
+      fontSize: {
+        "1.5xl": ["1.375rem", { lineHeight: "1.875rem" }],
+      },
+      spacing: {
+        "4.5": "1.125rem",
+        "5.5": "1.375rem",
+        "12.5": "3.125rem",
+        "13": "3.25rem",
+        "15": "3.75rem",
+      },
+      boxShadow: {
+        box: "0px 1px 8px rgba(0,0,0,0.10)",
+      },
+    },
+  },
+}
+```
+
+## Finished
+Now you are ready to use CHECKUI in your project. Have a look at the [components](/components) we provide.
