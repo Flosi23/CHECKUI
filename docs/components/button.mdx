@@ -3,8 +3,10 @@ title: Button
 description: "Buttons are the most common way to interact with a website."
 ---
 
-import { Story } from "/snippets/stories.mdx";
-import { codeStepTitle, depsStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import Button from "/snippets/components/Button.mdx";
 
 <Story component="button" story="filled" />
@@ -12,7 +14,11 @@ import Button from "/snippets/components/Button.mdx";
 ## Installation
 
 <Steps>
-  <Step title={depsStepTitle}>```tsx npm i @radix-ui/react-slot ```</Step>
+  <Step title={depsStepTitle}>
+      ```bash
+      npm i @radix-ui/react-slot
+      ```
+  </Step>
   <Step title={codeStepTitle}>
     <Button />
   </Step>

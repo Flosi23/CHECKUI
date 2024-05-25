@@ -1,6 +1,6 @@
-import { BoxedCheckboxGroup } from "../../src/Checkbox";
-import { Story } from "/snippets/stories.mdx";
-import { codeStepTitle, depsStepTitle, updateStepTitle } from "/snippets/installation.mdx";
+import {BoxedCheckboxGroup} from "../../src/Checkbox";
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import Checkbox from "/snippets/components/Checkbox.mdx";
 
 <Tabs>
@@ -18,7 +18,11 @@ import Checkbox from "/snippets/components/Checkbox.mdx";
 ## Installation
 
 <Steps>
-  <Step title={depsStepTitle}>```tsx npm i @radix-ui/react-checkbox ```</Step>
+  <Step title={depsStepTitle}>
+      ```bash
+      npm i @radix-ui/react-checkbox
+      ```
+  </Step>
   <Step title={codeStepTitle}>
     <Checkbox />
   </Step>
