@@ -10,7 +10,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(({ className, children, asC
   const Comp = asChild ? Slot : "div";
 
   return (
-    <Comp ref={ref} className={cn("bg-[rgba(0%,51.4%,0%,15%)] text-[#008300] px-1 py-0.5 rounded-sm", className)} {...props}>
+    <Comp ref={ref} className={cn("bg-[rgba(0%,51.4%,0%,15%)] text-[#008300] text-sm px-1 py-0.5 rounded-sm", className)} {...props}>
       {children}
     </Comp>
   );
