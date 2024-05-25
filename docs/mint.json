@@ -22,7 +22,11 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
     },
     {
       "group": "Essentials",
@@ -37,7 +41,11 @@
     },
     {
       "group": "Components",
-      "pages": ["components/button"]
+      "pages": [
+        "components/button",
+        "components/checkbox",
+        "components/radio-group"
+      ]
     }
   ]
 }

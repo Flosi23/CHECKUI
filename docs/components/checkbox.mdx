@@ -1,0 +1,47 @@
+---
+title: Checkbox
+description: "A control that allows the user to toggle between checked and not checked."
+---
+
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
+import Checkbox from "/snippets/components/Checkbox.mdx"
+
+<Story component="checkbox" story="default"/>
+
+## Installation
+<Steps>
+    <Step title={depsStepTitle}>
+        ```tsx
+        npm i @radix-ui/react-checkbox
+        ```
+    </Step>
+    <Step title={codeStepTitle}>
+        <Checkbox/>
+    </Step>
+    <Step title={updateStepTitle}></Step>
+</Steps>
+
+## Usage
+```tsx
+import { Checkbox } from "@/components/ui/Checkbox";
+
+<Checkbox/>
+```
+
+## Examples
+
+### Default
+<Story component="checkbox" story="default"/>
+
+### Disabled
+<Story component="checkbox" story="disabled"/>
+
+### With Label
+<Story title="With Label" component="checkbox" story="with-label"/>
+
+### With Error
+<Story title="With Error" component="checkbox" story="with-error"/>
+

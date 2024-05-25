@@ -21,8 +21,8 @@ const meta = {
     direction: "column",
     children: (
       <>
-        <RadioGroupItem value={"1"}>Text 1</RadioGroupItem>
-        <RadioGroupItem value={"2"}>Text 2</RadioGroupItem>
+        <RadioGroupItem value="1">Option 1</RadioGroupItem>
+        <RadioGroupItem value="2">Option 2</RadioGroupItem>
       </>
     ),
   },
@@ -32,11 +32,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Regular: Story = {};
+export const Default: Story = {};
+
+export const Row: Story = {
+  args: {
+    direction: "row",
+  },
+};
 
 export const Error: Story = {
   args: {
-    error: "Error Text"
+    error: "Error Text",
   },
 };
 
@@ -50,11 +56,9 @@ export const DisabledSingleElement: Story = {
   args: {
     children: (
       <>
-        <RadioGroupItem value={"1"}>
-          Text 1
-        </RadioGroupItem>
-        <RadioGroupItem value={"2"} disabled>
-          Text 2
+        <RadioGroupItem value="1">Option 1</RadioGroupItem>
+        <RadioGroupItem value="2" disabled>
+          Option 2
         </RadioGroupItem>
       </>
     ),

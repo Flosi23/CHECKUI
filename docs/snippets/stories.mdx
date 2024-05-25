@@ -1,0 +1,10 @@
+export const Story = ({component, story, height = "220px"}) => {
+    return (<>
+        <Frame>
+            <iframe
+                src={`http://localhost:3002/iframe.html?viewMode=story&id=components-${component}--${story}`}
+                title="Button" width="100%"
+                height={height}></iframe>
+        </Frame>
+    </>);
+}

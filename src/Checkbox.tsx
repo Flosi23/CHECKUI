@@ -18,28 +18,28 @@ const BoxedCheckboxGroup = React.forwardRef<React.ElementRef<typeof CheckboxGrou
     const usedId = id || generatedId;
 
     return (
-      <div className={"flex flex-col"}>
+      <div className="flex flex-col">
         {label && (
           <Label.Root htmlFor={usedId} className={cn("mb-3 flex items-center justify-between text-xl text-on-surface")}>
             {label}
 
             {onClickHelpIcon && (
-              <button onClick={onClickHelpIcon} className={"mr-4"}>
-                <HelptextOutline className={"h-5 w-5 fill-on-surface"} />
+              <button onClick={onClickHelpIcon} className="mr-4">
+                <HelptextOutline className="h-5 w-5 fill-on-surface" />
               </button>
             )}
           </Label.Root>
         )}
         <CheckboxGroup
           id={usedId}
-          className={"rounded-[5px] border border-outline data-[disabled]:bg-surface-container"}
+          className="rounded-[5px] border border-outline data-[disabled]:bg-surface-container"
           aria-invalid={!!error}
           aria-errormessage={`${usedId}-error`}
           {...props}
           ref={ref}
         />
         {error && (
-          <span id={`${usedId}-error`} className={"mt-1 text-sm leading-4 text-error"}>
+          <span id={`${usedId}-error`} className="mt-1 text-sm leading-4 text-error">
             {error}
           </span>
         )}
@@ -84,8 +84,8 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
     const usedId = id || generatedId;
 
     return (
-      <div className={"flex flex-col gap-1"}>
-        <div className={"flex items-center gap-3"}>
+      <div className="flex flex-col gap-1">
+        <div className="flex items-center gap-3">
           <CheckboxPrimitive.Root
             id={usedId}
             ref={ref}
@@ -93,7 +93,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
               `peer flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-[3px]
          border border-outline
          disabled:cursor-not-allowed disabled:bg-surface-container
-         data-[state=checked]:bg-primary`,
+         data-[state=checked]:border-primary data-[state=checked]:bg-primary`,
               className,
             )}
             aria-invalid={!!error}
@@ -105,7 +105,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
           </CheckboxPrimitive.Root>
           {children && (
             <Label.Root
-              className={"text-lg leading-none text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"}
+              className="text-lg leading-none text-on-surface peer-disabled:cursor-not-allowed peer-disabled:text-on-surface-light"
               htmlFor={usedId}>
               {children}
             </Label.Root>
@@ -113,7 +113,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
         </div>
 
         {error && (
-          <span id={`${usedId}-error`} className={"text-sm leading-4 text-error"}>
+          <span id={`${usedId}-error`} className="text-sm leading-4 text-error">
             {error}
           </span>
         )}

@@ -26,13 +26,13 @@ export const Disabled: Story = {
 
 export const Label: Story = {
   args: {
-    children: "Ich habe die AGB gelesen und akzeptiere sie",
+    children: "I agree to the terms and conditions",
   },
 };
 
 export const Error: Story = {
   args: {
-    children: "Ich habe die AGB gelesen und akzeptiere sie",
-    error: "Bitte akzeptieren Sie die AGB",
+    children: "I agree to the terms and conditions",
+    error: "Please agree to the terms and conditions",
   },
 };

@@ -3,23 +3,45 @@ title: Button
 description: "Buttons are the most common way to interact with a website."
 ---
 
-import {Story} from "/snippets/examples.mdx";
-import {codeStepTitle, Installation, updateStepTitle} from "/snippets/installation.mdx";
+
+
+import {Story} from "/snippets/stories.mdx";
+import {codeStepTitle, depsStepTitle, updateStepTitle} from "/snippets/installation.mdx";
 import Button from "/snippets/components/Button.mdx"
 
-<Story title="Component" id="components-button--filled"/>
+<Story component="button" story="filled"/>
 
-<Installation>
+## Installation
+<Steps>
+    <Step title={depsStepTitle}>
+        ```tsx
+        npm i @radix-ui/react-slot
+        ```
+    </Step>
     <Step title={codeStepTitle}>
         <Button/>
     </Step>
     <Step title={updateStepTitle}></Step>
-</Installation>
+</Steps>
+
+## Usage
+```tsx
+import { Button } from "@/components/ui/Button";
+
+<Button variant="filled">Button</Button>
+```
 
 ## Examples
 
-<Story title="Filled" id="components-button--filled"/>
-<Story title="Outlined" id="components-button--outlined"/>
-<Story title="Outlined Primary" id="components-button--outlined-primary"/>
-<Story title="With Icon" id="components-button--icon"/>
+### Filled
+<Story component="button" story="filled"/>
+
+### Outlined
+<Story component="button" story="outlined"/>
+
+### Outlined Primary
+<Story component="button" story="outlined-primary"/>
+
+### With Icon
+<Story component="button" story="icon"/>
 
