@@ -31,9 +31,3 @@ export const Bestseller: Story = {
     children: "Bestseller",
   },
 };
-
-export const Truncated: Story = {
-  args: {
-    className: "w-16"
-  }
-};
