@@ -20,7 +20,7 @@ const BoxedCheckboxGroup = React.forwardRef<
   const usedId = id || generatedId;
 
   return (
-    <div className="flex flex-col">
+    <div className={cn("flex flex-col", className)}>
       {label && (
         <Label.Root
           htmlFor={usedId}

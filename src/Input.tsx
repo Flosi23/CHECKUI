@@ -174,7 +174,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 hasContent && focused ? "opacity-100" : "cursor-text opacity-0",
               )}
               onMouseDown={handleClear}>
-              <Cancel className="h-4 w-4" />
+              <Cancel className="h-4 w-4 fill-on-surface-very-light" />
             </button>
             {Icon && <Icon className="h-5 w-5 fill-on-surface-light text-on-surface-light" />}
             {onClickHelpIcon && !loading && (
