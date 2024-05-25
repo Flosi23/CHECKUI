@@ -30,6 +30,10 @@
 	{
 	  "name": "TypeScript Types",
 	  "url": "types"
+	},
+	{
+	  "name": "Miscellaneous",
+	  "url": "misc"
 	}
   ],
   "navigation": [
@@ -75,6 +79,25 @@
 			"wireframe/integration/react",
 			"wireframe/integration/remix",
 			"wireframe/integration/nextjs"
+		  ]
+		}
+	  ]
+	},
+	{
+	  "group": "Miscellaneous",
+	  "pages": [
+		{
+		  "group": "Tracking",
+		  "pages": [
+			"misc/tracking/wpset",
+			"misc/tracking/gtm",
+			"misc/tracking/cookie-consent"
+		  ]
+		},
+		{
+		  "group": "Utilities",
+		  "pages": [
+			"misc/utils/device-output"
 		  ]
 		}
 	  ]
