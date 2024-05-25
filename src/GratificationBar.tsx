@@ -4,13 +4,13 @@ import { HelptextOutline, InfoCircle } from "@lib/icons";
 import { cn } from "@lib/utils";
 
 const gratificationBarVariants = cva(
-  `flex items-center justify-between px-3 py-1 text-sm leading-4 bg-[#C1E3E3] text-[#005C61] stroke-[#005C61] fill-[#005C61] 
+  `flex items-center justify-between px-3 py-1 text-sm leading-4
   data-[invalid]:text-error data-[invalid]:stroke-error data-[invalid]:stroke-fill`,
   {
     variants: {
       variant: {
-        regular: "",
-        goldclub: "",
+        regular: "bg-[#C1E3E3] text-[#005C61] stroke-[#005C61] fill-[#005C61]",
+        goldclub: "bg-[#EBD49D] text-[#8F6E0B] stroke-[#8F6E0B] fill-[#8F6E0B]",
       },
       lines: {
         1: "h-[28px]",

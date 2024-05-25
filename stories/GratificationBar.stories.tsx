@@ -36,6 +36,14 @@ export const HelpOverlay: Story = {
   },
 };
 
+export const GoldClub: Story = {
+  args: {
+    variant: "goldclub",
+    icon: <Edit className={"w-18 stroke-0"} />,
+    onClickHelpIcon: fn()
+  },
+};
+
 export const TwoLines: Story = {
   args: {
     children: <div>
