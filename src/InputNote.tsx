@@ -21,7 +21,10 @@ const InputNote = forwardRef<HTMLDivElement, InputNoteProps>(
     return (
       <Comp
         id={usedId}
-        className={cn("shadow-box relative rounded-[5px] border border-primary bg-surface p-4", className)}
+        className={cn(
+          "relative rounded-[5px] border border-primary bg-surface p-4 shadow-box",
+          className,
+        )}
         {...props}>
         <Slottable>{children}</Slottable>
         {onClickClose && (

@@ -64,8 +64,8 @@ export default {
           "2156ms spinner-arc ease-in-out infinite, 1829ms spinner-rotate linear infinite",
       },
       boxShadow: {
-        "box": "0px 1px 8px rgba(0,0,0,0.10)",
-      }
+        box: "0px 1px 8px rgba(0,0,0,0.10)",
+      },
     },
   },
   plugins: [require("tailwindcss-safe-area")],

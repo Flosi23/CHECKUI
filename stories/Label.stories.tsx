@@ -21,7 +21,7 @@ export const Regular: Story = {
   args: {
     variant: "regular",
     children: "Leistungs-Empfehlung",
-    showInfoIcon: true
+    showInfoIcon: true,
   },
 };
 
